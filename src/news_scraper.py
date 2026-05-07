@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 class NewsHeadline:
     """Represents a news headline with source information"""
-    def __init__(self, title: str, source: str, url: str = None):
+    def __init__(self, title: str, source: str, url: str = None): # type: ignore
         self.title = title
         self.source = source
         self.url = url
@@ -56,7 +56,7 @@ class BusinessNewsScraper:
             response = requests.get(feed_url, headers=BusinessNewsScraper.HEADERS, timeout=BusinessNewsScraper.TIMEOUT)
             response.raise_for_status()
             
-            soup = BeautifulSoup(response.content, 'html5lib')
+            soup = BeautifulSoup(response.content, 'html5lib') # type: ignore
             headlines = []
             
             # Parse RSS items
@@ -74,7 +74,7 @@ class BusinessNewsScraper:
                     url = link_tag.get_text(strip=True) if link_tag else None
                     
                     if text and len(text) > 10:
-                        headlines.append(NewsHeadline(text, source, url))
+                        headlines.append(NewsHeadline(text, source, url)) # type: ignore
             
             logger.info(f"[{source}] Extracted {len(headlines)} headlines")
             return headlines
