@@ -1,6 +1,9 @@
 # Discord AI Bot
 
-A Discord bot powered by OpenAI that provides intelligent responses to user questions.
+A Discord bot powered by OpenAI that scrapes multiple news sources and provides a list of the current most popular business news stories.
+The bot specifically looks through mainstream news articles and reads the RSS Feeds to find the most popular topics. The user can change what 
+feeds are searched through.
+There are some extra functions included in the bot that will be removed because they serve no purpose for this project.
 
 ## Features
 
