@@ -40,7 +40,11 @@ A Discord bot powered by OpenAI that provides intelligent responses to user ques
    ```bash
    cp .env.example .env
    ```
-   
+
+   ```powershell
+   copy-Item .env.example .env
+   ```
+
    Edit `.env` and add your credentials:
    - `DISCORD_TOKEN`: Your Discord bot token
    - `OPENAI_API_KEY`: Your OpenAI API key
